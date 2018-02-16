@@ -22,15 +22,15 @@ def start
 end
 
 def checking
-    split_string = @word
+    split_string = @word.split
     @ra = []
     @word.size.times { @ra << split_string.pop} #tring to push and pop from the @word string to the reversed array but my syntax is off somewhere
     @ra.join
-    if @ra = @word
-        puts "Your word is indeed a Palindrom"
+    if @ra != @word
+        puts "Your word is not a Palindrom"
         menu
-    else
-        puts "your word is not a Palindrome"
+    else @ra = @word
+        puts "Your word is indeed a Palindrome"
         menu
     end
 end
